@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="39b5613f275faa3b8e2722aa3925f655.jpg" />
+    <None Remove="department.png" />
+    <None Remove="dragon.png" />
+    <None Remove="dragonmain.png" />
+    <None Remove="employee.png" />
+    <None Remove="exit.png" />
+    <None Remove="logout.png" />
+    <None Remove="permission.png" />
+    <None Remove="position.png" />
+    <None Remove="salary.png" />
+    <None Remove="task.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="39b5613f275faa3b8e2722aa3925f655.jpg" />
+    <Resource Include="department.png" />
+    <Resource Include="dragon.png" />
+    <Resource Include="dragonmain.png" />
+    <Resource Include="employee.png" />
+    <Resource Include="exit.png" />
+    <Resource Include="logout.png" />
+    <Resource Include="permission.png" />
+    <Resource Include="position.png" />
+    <Resource Include="salary.png" />
+    <Resource Include="task.png" />
+  </ItemGroup>
+
+</Project>

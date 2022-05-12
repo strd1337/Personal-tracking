@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="DepartmentPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EmployeePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="LoginPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PermissionPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PositionPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SalaryPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TaskPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\DepartmentList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\EmployeeList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PermissionList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PositionList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\SalaryList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\TaskList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="DepartmentPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EmployeePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="LoginPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PermissionPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PositionPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SalaryPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TaskPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\DepartmentList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\EmployeeList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\PermissionList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\PositionList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\SalaryList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\TaskList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

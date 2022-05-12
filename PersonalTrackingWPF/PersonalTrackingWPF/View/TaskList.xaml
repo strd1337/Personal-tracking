@@ -1,0 +1,87 @@
+﻿<UserControl x:Class="PersonalTrackingWPF.View.TaskList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PersonalTrackingWPF.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" FontSize="18" FontWeight="Bold" d:DesignWidth="800" Loaded="UserControl_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"></RowDefinition>
+            <RowDefinition Height="6*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+            </Grid>
+            <Label Content="UserNumber" Height="34" Width="100" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+            <TextBox x:Name="txtUserNumber" Grid.Column="1" TextWrapping="Wrap" Height="26"></TextBox>
+            <Label Content="Name" Grid.Row="1" Height="34" Width="100" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+            <TextBox x:Name="txtName" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" Height="26"></TextBox>
+            <Label Content="Surname" Grid.Row="2" Height="34" Width="100" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+            <TextBox x:Name="txtSurname" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" Height="26"></TextBox>
+            <Label Content="Department" Grid.Row="3" Height="34" Width="100" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+            <ComboBox Name="cmbDepartment" Grid.Column="1" Grid.Row="3" Height="30" VerticalAlignment="Center" SelectionChanged="cmbDepartment_SelectionChanged"></ComboBox>
+            <Label Content="Position" Grid.Row="4" Height="34" Width="100" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+            <ComboBox Name="cmbPosition" Grid.Column="1" Grid.Row="4" Height="30" VerticalAlignment="Center"></ComboBox>
+            <Label Content="Task date" Grid.Column="3" Height="34" Width="100" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+            <Label Content="Start" Grid.Column="2" Grid.Row="1" Height="34" Width="100" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+            <Label Content="Delivery" Grid.Column="2" Grid.Row="2" Height="34" Width="100" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+            <DatePicker Name="dpStart" Height="34" Width="170" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center"></DatePicker>
+            <DatePicker Name="dpDelivery" Height="34" Width="170" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center"></DatePicker>
+            <Label Content="State" Grid.Column="2" Grid.Row="3" Height="34" Width="100" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+            <ComboBox Name="cmbState" Grid.Column="3" Grid.Row="3" Height="30" VerticalAlignment="Center"></ComboBox>
+            <RadioButton x:Name="rbStart" Content="Start date" Grid.Column="4" HorizontalAlignment="Left" VerticalAlignment="Center"></RadioButton>
+            <RadioButton x:Name="rbDelivery" Content="Delivery date" Grid.Column="4" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center"></RadioButton>
+            <Button x:Name="btnSearch" Content="Search" Grid.Column="4" Grid.Row="3" Margin="10,3,10,3" Click="btnSearch_Click"></Button>
+            <Button x:Name="btnClear" Content="Clear" Grid.Column="4" Grid.Row="4" Margin="10,2,10,3" Click="btnClear_Click"/>
+        </Grid>
+        <DataGrid x:Name="gridTask" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True" SelectionChanged="gridTask_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Width="*" Binding="{Binding Id}" Visibility="Hidden"></DataGridTextColumn>
+                <DataGridTextColumn Header="UserNumber" Width="*" Binding="{Binding UserNumber}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Name" Width="*" Binding="{Binding Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Surname" Width="*" Binding="{Binding Surname}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Title" Width="*" Binding="{Binding TaskTitle}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Start date" Width="*" Binding="{Binding TaskStartDate}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Delivery date" Width="*" Binding="{Binding TaskDeliveryDate}"></DataGridTextColumn>
+                <DataGridTextColumn Header="State name" Width="*" Binding="{Binding StateName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="EmployeeId" Width="*" Binding="{Binding EmployeeId}" Visibility="Hidden"></DataGridTextColumn>
+                <DataGridTextColumn Header="TaskState" Width="*" Binding="{Binding TaskState}" Visibility="Hidden"></DataGridTextColumn>
+                <DataGridTextColumn Header="TaskTitle" Width="*" Binding="{Binding TaskTitle}" Visibility="Hidden"></DataGridTextColumn>
+                <DataGridTextColumn Header="TaskContent" Width="*" Binding="{Binding TaskContent}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnApprove" Content="Approve" FontSize="18" FontWeight="Bold" Margin="40,5,40,5" Click="btnApprove_Click"></Button>
+            <Button x:Name="btnAdd" Content="Add" Grid.Column="1" FontSize="18" FontWeight="Bold" Margin="40,5,40,5" Click="btnAdd_Click"></Button>
+            <Button x:Name="btnUpdate" Content="Update" Grid.Column="2" FontSize="18" FontWeight="Bold" Margin="40,5,40,5" Click="btnUpdate_Click"></Button>
+            <Button x:Name="btnDelete" Content="Delete" Grid.Column="3" FontSize="18" FontWeight="Bold" Margin="40,5,40,5" Click="btnDelete_Click"></Button>
+        </Grid>
+    </Grid>
+</UserControl>
